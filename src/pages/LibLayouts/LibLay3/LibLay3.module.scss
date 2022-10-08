@@ -1,0 +1,107 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+$fixed-max-width: 1150px;
+
+.page-3 {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        // add padding top >> header + fixedbar
+        padding-top: 70px;
+
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+
+            .base-head {
+                margin: 0 auto;
+                max-width: $fixed-max-width;
+                position: relative;
+                .wrapper {
+                    position: relative;
+                    padding-top: 12px;
+                    padding-bottom: 16px;
+                    .left {
+                        float: left;
+                        width: 60%;
+                        .main-title {
+                            font-size: 24px;
+                            line-height: 32px;
+                            padding-top: 6px;
+                        }
+                    }
+                    .right {
+                        float: right;
+                        text-align: right;
+                        .actions {
+                            > * {
+                                margin-left: 8px;
+                            }
+                        }
+
+                        .menu-button {
+                            display: none;
+                        }
+                        @media (max-width: $clx-break-max-width-2-sm) {
+                            min-height: auto;
+                            .actions {
+                                display: none;
+                            }
+                            .menu-button {
+                                display: inline;
+                            }
+                            .main-title {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tab-nav {
+                margin: 0 auto;
+                max-width: $fixed-max-width;
+            }
+
+            .tab-content {
+                max-width: $fixed-max-width;
+                margin: 0 auto;
+                padding-top: 16px;
+                padding-bottom: 0;
+                .tab-wrapper {
+                }
+            }
+
+            .base-grid {
+                max-width: $fixed-max-width;
+                margin: 0 auto;
+                .col {
+                    .card {
+                        min-height: 500px;
+                        padding: 16px;
+
+                        &.left {
+                            margin-right: 8px;
+                        }
+                        &.right {
+                            margin-left: 8px;
+                        }
+                        @media (max-width: $clx-break-max-width-2-sm) {
+                            min-height: auto;
+                            margin-left: 0 !important;
+                            margin-right: 0 !important;
+                            margin-bottom: 16px;
+                            &.right {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

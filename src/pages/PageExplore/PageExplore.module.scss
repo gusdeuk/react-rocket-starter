@@ -1,0 +1,171 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-explore {
+    background-color: #f8f9fb;
+
+    &.page-wrapper {
+        padding-top: 56px;
+
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+            a {
+                text-decoration: none;
+                display: block;
+            }
+            .card-content {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+                border-radius: 8px;
+
+                .card-head {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    height: 70px;
+                    .card-icon {
+                        color: rgb(255, 255, 255, 0.8);
+                        margin: 0;
+                        width: 36px;
+                        height: 36px;
+                        svg {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 80px 24px 75px;
+                    @media (max-width: 1279px) {
+                        padding: 90px 16px 80px;
+                        text-align: center;
+                    }
+
+                    .card-title {
+                        margin-bottom: 8px;
+                        text-align: center;
+                        margin-top: 4px;
+                        p {
+                            color: $clx-color-neutral-8;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .card-text {
+                        color: $clx-color-neutral-7;
+                        font-size: 14px;
+                        margin: 0 0 0 0;
+                        line-height: 1.2;
+                        p {
+                            margin: 0 0 4px 0;
+                        }
+                    }
+                    .card-tag {
+                        text-align: center;
+                        margin-top: 4px;
+                    }
+                }
+                .card-footer {
+                    position: absolute;
+                    background-color: #f8f9fb;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-top: solid 1px #e9e9e9;
+                    padding: 16px;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .link {
+                        display: block;
+                        min-width: 80px;
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            // ---------------------------------------------
+            // pseudo global assigments
+            // CARDS
+            :global .card-blue {
+                background: $clx-gradient-blue;
+            }
+            :global .card-red {
+                background: $clx-gradient-red;
+            }
+            :global .card-yellow {
+                background: $clx-gradient-yellow;
+            }
+            :global .card-purple {
+                background: $clx-gradient-purple;
+            }
+            :global .card-orange {
+                background: $clx-gradient-orange;
+            }
+            :global .card-green {
+                background: $clx-gradient-green;
+            }
+            :global .card-grey {
+                background: $clx-gradient-grey;
+            }
+            :global .card-fuchsia {
+                background: $clx-gradient-fuchsia;
+            }
+            // ---------------------------------------------
+            // TAGS
+            :global .tag-blue {
+                background: $clx-color-data-blue;
+            }
+            :global .tag-red {
+                background: $clx-color-data-red;
+            }
+            :global .tag-yellow {
+                background: $clx-color-data-yellow;
+            }
+            :global .tag-purple {
+                background: $clx-color-data-purple;
+            }
+            :global .tag-orange {
+                background: $clx-color-data-orange;
+            }
+            :global .tag-green {
+                background: $clx-color-data-green;
+            }
+            :global .tag-grey {
+                background: $clx-color-data-grey;
+            }
+            :global .tag-fuchsia {
+                background: $clx-color-data-fuchsia;
+            }
+
+            // ---------------------------------------------
+            // component types
+            :global .card-type-component {
+                filter: saturate(80%);
+            }
+            :global .card-type-layout {
+                filter: saturate(130%);
+            }
+        }
+    }
+}

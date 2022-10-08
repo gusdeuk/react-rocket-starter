@@ -1,0 +1,17 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.tab {
+    :global {
+        .MuiChip-labelSmall {
+            padding-top: 2px;
+        }
+        .MuiChip-root {
+            margin-bottom: 16px;
+        }
+    }
+}

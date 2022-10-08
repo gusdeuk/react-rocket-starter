@@ -1,0 +1,54 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-2 {
+    //background-color: #f8f9fb;
+    background-color: $clx-color-neutral-1;
+    //background: $clx-color-theme-gradient;
+
+    &.page-wrapper {
+        // add padding top >> header + fixedbar
+        padding-top: 140px;
+
+        .content {
+            padding-left: 24px;
+            padding-right: 24px;
+
+            margin-right: 280px;
+            transition: margin-right 0.5s ease-in-out;
+            // is-open dynamic class for content
+            &:global {
+                &.toolbar-closed {
+                    margin-right: 50px;
+                }
+            }
+            .card-test {
+                padding: 16px;
+                height: 100px;
+            }
+
+            .headline-title {
+                font-size: 24px;
+                font-weight: 300;
+                margin-bottom: 12px;
+                color: $clx-color-theme-primary-dark;
+                @media (max-width: $clx-break-max-width-1-xs) {
+                    font-size: 18px;
+                }
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .content {
+                &:global {
+                    &:not(.toolbar-closed) {
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

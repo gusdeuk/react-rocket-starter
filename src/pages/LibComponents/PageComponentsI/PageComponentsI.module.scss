@@ -1,0 +1,17 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-i {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        padding-top: 56px;
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+}

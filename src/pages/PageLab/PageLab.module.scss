@@ -1,0 +1,44 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-lab {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        padding-top: 56px;
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+            .tab-nav {
+                display: flex;
+                justify-content: center;
+                :global {
+                    .MuiToggleButton-root.MuiToggleButton-root.Mui-selected {
+                        color: #ffffff;
+                        // border-color: $clx-color-data-purple;
+                        //background-color: $clx-color-data-purple;
+                    }
+                    .MuiToggleButton-root {
+                        min-width: 50px;
+                    }
+                    .MuiToggleButton-root:hover {
+                        //color: $clx-color-data-purple;
+                        //background-color: hsla(288deg, 37%, 51%, 0.15);
+                    }
+                }
+            }
+
+            .tab-content {
+                margin: 0 auto;
+                padding-top: 32px;
+                padding-bottom: 0;
+                .tab-wrapper {
+                }
+            }
+        }
+    }
+}

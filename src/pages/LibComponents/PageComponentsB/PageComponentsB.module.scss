@@ -1,0 +1,67 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-b {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        padding-top: 56px;
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+
+            .cardStyle {
+                min-width: 80px;
+                padding: 8px 0 16px 0;
+                text-align: center;
+                box-shadow: 0 4px 16px 0 rgb(0 0 0 / 4%);
+                border: 2px solid $clx-color-neutral-3;
+                border-radius: 6px;
+                cursor: pointer;
+                &:hover {
+                    border-color: lighten($clx-color-theme-primary, 25%);
+                    background-color: $clx-color-theme-primary-light;
+                    transform: scale(1.1);
+                    transition: all 0.2s;
+                    .iconContainer {
+                        svg {
+                            color: $clx-color-theme-primary !important;
+                        }
+                    }
+                    p {
+                        color: $clx-color-theme-primary !important;
+                    }
+                }
+            }
+
+            .iconNameStyle {
+                font-size: 12px;
+                padding: 0 10px;
+            }
+
+            .spacingBottomStyle {
+                margin-bottom: 10px;
+            }
+            .iconContainer {
+                height: 48px;
+                width: 48px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.modal-icons {
+    .wrapIcon {
+        svg {
+            margin-right: 8px;
+        }
+    }
+}

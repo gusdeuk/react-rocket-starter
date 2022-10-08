@@ -1,0 +1,17 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.tab-grid {
+    .cell {
+        padding: 16px;
+        text-align: center;
+
+        p {
+            font-size: 12px;
+        }
+    }
+}

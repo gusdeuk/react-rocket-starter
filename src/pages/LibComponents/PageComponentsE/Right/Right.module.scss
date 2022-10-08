@@ -1,0 +1,17 @@
+.tags {
+    // extend badge styles
+    .test-badge-style {
+        :global {
+            [class*="MuiBadge-badge"] {
+                background-color: #9e54b0;
+            }
+        }
+    }
+    .test-badge-style-2 {
+        :global {
+            [class*="MuiBadge-badge"] {
+                background-color: #ff9300;
+            }
+        }
+    }
+}

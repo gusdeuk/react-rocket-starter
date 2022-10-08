@@ -1,0 +1,24 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+
+.test-page {
+    font-size: 14px;
+}
+
+.syntax-style {
+    :global {
+        pre {
+            background-color: #fff !important;
+            border: solid 1px #eee;
+            border-radius: 8px;
+            code {
+                background-color: #fff !important;
+            }
+        }
+    }
+}

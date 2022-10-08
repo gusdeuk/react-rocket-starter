@@ -1,0 +1,109 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-launch {
+    background-color: #f8f9fb;
+    position: relative;
+    &.page-wrapper {
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        position: relative;
+        .waves-top {
+            position: relative;
+            z-index: 100;
+            //background-color: #f8f9fb;
+            .waves-wrapper {
+                .svg-desktop {
+                    width: 100%;
+                    height: auto;
+                }
+                .svg-mobile {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            @media (max-width: $clx-break-max-width-2-sm) {
+                .waves-wrapper {
+                    .svg-desktop {
+                        transform: scaleY(2) scaleX(1);
+                    }
+                }
+            }
+            @media (max-width: $clx-break-max-width-1-xs) {
+                .waves-wrapper {
+                    .svg-desktop {
+                        display: none;
+                    }
+                    .svg-mobile {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+        .content {
+            width: 290px;
+            position: absolute;
+            z-index: 99;
+            top: calc(50vh - 130px);
+            .login-pass-text-field {
+                margin-bottom: 10px;
+                label,
+                p {
+                    text-align: center;
+                }
+            }
+
+            .title {
+                text-align: center;
+                font-size: 32px;
+                font-weight: 200;
+                color: #af7cbc;
+                letter-spacing: -0.05rem;
+            }
+            .app-version {
+                font-size: 12px;
+                text-align: center;
+                margin-top: 40px;
+                color: rgb(151, 151, 151);
+            }
+        }
+        .water-logo {
+            position: absolute;
+            z-index: 0;
+            bottom: 50px;
+
+            .water-wrapper {
+                height: 600px;
+                .svg-water {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            @media (max-width: $clx-break-max-width-2-sm) {
+            }
+            @media (max-width: $clx-break-max-width-1-xs) {
+                .water-wrapper {
+                    height: 300px;
+                    .svg-water {
+                    }
+                }
+            }
+        }
+        @media (max-width: $clx-break-max-width-1-xs) {
+            .water-logo {
+                bottom: 25px;
+            }
+        }
+    }
+}

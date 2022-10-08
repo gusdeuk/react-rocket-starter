@@ -1,0 +1,14 @@
+.top-nav-fixed-bar-component {
+    // fix proj header behavior
+    .proj-header {
+        top: 56px;
+    }
+}
+
+//--------------------------------------------------------------
+// FIX for on open drop down "movement" > selector pointing to material UI classes
+:global {
+    [class*="MuiAppBar-root"] {
+        padding-right: 0 !important;
+    }
+}

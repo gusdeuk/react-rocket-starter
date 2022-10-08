@@ -1,0 +1,26 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.comp-logogrid {
+    .logos-container {
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                //background-color: rgb(207, 143, 143);
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}

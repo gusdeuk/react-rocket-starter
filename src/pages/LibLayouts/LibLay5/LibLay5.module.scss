@@ -1,0 +1,23 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-5 {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        padding-top: 56px;
+
+        .content {
+            padding-left: 0;
+            padding-right: 0;
+            width: 100%;
+            .top-hero {
+                margin-bottom: 20px;
+                padding-top: 10px;
+            }
+        }
+    }
+}

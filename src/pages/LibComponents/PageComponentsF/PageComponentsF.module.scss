@@ -1,0 +1,25 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-f {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        padding-top: 56px;
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        // is-open dynamic class for content
+        :global {
+            [class*="MuiSlider-mark-"] {
+                height: 4px;
+            }
+        }
+    }
+}

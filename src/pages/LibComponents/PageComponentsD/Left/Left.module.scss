@@ -1,0 +1,15 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.tab {
+    :global {
+        .MuiTab-root {
+            overflow: visible;
+            margin-top: 4px;
+        }
+    }
+}

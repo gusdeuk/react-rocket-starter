@@ -1,0 +1,157 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-4 {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        // add padding top >> header + fixedbar
+        padding-top: 220px;
+
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+            // fix proj header behavior
+            .fixed-bar {
+                top: 56px;
+                position: fixed;
+                left: 0;
+                right: 0;
+                z-index: 100;
+
+                h3,
+                p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @media (max-width: 500px) {
+                        max-width: 170px;
+                    }
+                }
+                .menu-button {
+                    display: none;
+                    width: 100px;
+                    @media (max-width: $clx-break-max-width-2-sm) {
+                        display: block;
+                    }
+                }
+                .in-line-actions {
+                    display: none;
+                    @media (min-width: 960px) {
+                        display: block;
+                    }
+                }
+            }
+
+            .tab-nav {
+                padding-top: 24px;
+                padding-left: 24px;
+                padding-right: 24px;
+                background-color: #f8f9fb;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 145px;
+                z-index: 1000;
+            }
+
+            .tab-content {
+                padding-top: 24px;
+                position: relative;
+                .tab-wrapper {
+                    .tab-actions {
+                        display: flex;
+                        position: relative;
+                        z-index: 10;
+                        .mui-select-ctrl {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            > div {
+                                margin-top: 0;
+                            }
+                        }
+                        .mui-menu-ctrl {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+                        .left,
+                        .right {
+                            flex: 1 1 auto;
+                            display: flex;
+                            .item {
+                                margin-right: 8px;
+                                padding-bottom: 16px;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                &.sort-text {
+                                    display: flex;
+                                    align-items: center;
+                                    padding-left: 8px;
+                                    margin-right: 2px;
+                                }
+                            }
+                        }
+                        .right {
+                            flex: 0 0 0;
+                        }
+                        @media (max-width: $clx-break-max-width-2-sm) {
+                            flex-direction: column;
+                            .left,
+                            .right {
+                                flex: 0 0 auto;
+                                flex-wrap: wrap;
+                                .item {
+                                    margin-left: 0;
+                                    margin-right: 8px;
+
+                                    &.info-icon {
+                                        display: none;
+                                    }
+                                    &.sort-icon {
+                                        display: none;
+                                    }
+                                    &.sort-text {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .base-grid {
+                    .card-base {
+                        padding: 8px 16px;
+                        height: 100px;
+
+                        .card-head {
+                            position: relative;
+                            .card-title {
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: $clx-color-black;
+                                margin-bottom: 4px;
+                                border-bottom: solid 1px $clx-color-neutral-3;
+                                padding-bottom: 4px;
+                            }
+                            .card-collapser {
+                                position: absolute;
+                                top: -8px;
+                                right: -8px;
+                                transform: scale(0.8);
+                            }
+                        }
+                        .card-content {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

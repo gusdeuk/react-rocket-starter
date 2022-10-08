@@ -1,0 +1,66 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.tab-color {
+    .card-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+
+        .card-head {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 50px;
+            .card-icon {
+                color: rgb(255, 255, 255, 0.8);
+                margin: 0;
+                width: 36px;
+                height: 36px;
+                &.dark {
+                    color: rgb(0, 0, 0, 0.3);
+                }
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 16px 0;
+            text-align: center;
+
+            .card-title {
+                margin-bottom: 8px;
+                text-align: center;
+                margin-top: 4px;
+                color: $clx-color-neutral-6;
+                font-size: 16px;
+            }
+
+            .card-text {
+                color: $clx-color-neutral-7;
+                font-size: 13px;
+                margin: 0 0 4px 0;
+                line-height: 1.2;
+            }
+        }
+    }
+}

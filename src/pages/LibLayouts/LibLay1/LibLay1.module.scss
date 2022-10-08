@@ -1,0 +1,52 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.page-1 {
+    background-color: #f8f9fb;
+    &.page-wrapper {
+        // add padding top >> header + fixedbar
+
+        padding-top: 170px;
+
+        .content {
+            width: 100%;
+            padding-left: 24px;
+            padding-right: 24px;
+            .card-test {
+                padding: 16px;
+                height: 300px;
+            }
+
+            .headline-title {
+                font-size: 24px;
+                font-weight: 300;
+                margin-bottom: 12px;
+                color: $clx-color-theme-primary-dark;
+                @media (max-width: $clx-break-max-width-1-xs) {
+                    font-size: 18px;
+                }
+            }
+
+            // fix proj header behavior
+            .fixed-bar {
+                top: 56px;
+                position: fixed;
+                left: 0;
+                right: 0;
+                h3,
+                p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @media (max-width: 500px) {
+                        max-width: 170px;
+                    }
+                }
+            }
+        }
+    }
+}

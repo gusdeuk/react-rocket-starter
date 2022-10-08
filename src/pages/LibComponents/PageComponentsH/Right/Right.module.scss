@@ -1,0 +1,15 @@
+/* ------------------------------------------------ */
+/* import global variables */
+@import "../../../../styles/global-variables";
+
+/* ------------------------------------------------ */
+/* component scoped SCSS */
+/* ------------------------------------------------ */
+.tab {
+    // is-open dynamic class for content
+    :global {
+        [class*="MuiSlider-mark"] {
+            height: 4px;
+        }
+    }
+}
